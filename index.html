@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jintlin's Portfolio</title>
+  <!-- viewport, ensure proper rendering and touch zooming on mobile devices -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- owl carousel -->
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <!-- superslider css -->
+  <link rel="stylesheet" href="css/superslides.css">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/185a6a9e63.js"></script>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- fancybox css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <!-- local css -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- we are putting jquery here because there is something later requires it to be in the head -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="loader">
+    <div class="inner">
+    </div>
+  </div>
+
+  <div id="slides">
+
+    <div class="overlay"></div>
+
+    <div class="slides-container">
+      <img src="img/slide1.jpg" alt="">
+      <img src="img/slide2.jpg" alt="">
+      <img src="img/slide3.jpg" alt="">
+    </div>
+
+    <div class="titleMessage">
+      <div class="heading">
+        <p class='main'>JINGLIN TAN</p>
+        <p class='sub typed'></p> <!-- added a typed class for the typed js, make the <p> empty for strings: [] in script.js-->
+      </div>
+    </div>
+
+    <nav class="slides-navigation">
+      <a href="#" class="next"></a>
+      <a href="#" class="prev"></a>
+    </nav>
+
+
+
+  </div>
+
+  <nav id="navigation" class="navbar navbar-expand-lg"> <!-- get rid of navbar-light and bg-light so we can apply our own color and different burger icon -->
+    <a class="navbar-brand" href="#">Welcome</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#skills">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#stats">Stats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#portfolio">Portfolio</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <div id="about" class="section">
+    <div class="container">  <!-- the container is not mandatory, but without it, there will be no margin on the sides -->
+      <div class="row">
+        <div class="col-md-5">
+          <img class="aboutImage" src="img/aboutImg.jpg" alt="">
+        </div>
+        <div class="col-md-7">
+          <h1>My name is Jinglin Tan</h1>
+          <p>Hi there! I'm Jinglin Tan. I'm currently a senior student studying computer science in Brooklyn college. I am aiming to become a Software Engineer. I taught myself a lot of programming languages, such as Java, C++, Javascript, Python and C#, and I have been building apps and websites.</p>
+          <p>I found my love in coding 2 years ago and decided to turn this hobby into career. Since then, I have been pursuing for coding education both in schools and on websites. I have finished a one-month coding bootcamp in California, and now I am a senior computer science student keeping a GPA of 3.9. I am expecting to graduate at the end of 2019.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="skills" class="skillsSection section">
+    <div class="container">  <!-- the container is not mandatory, but without it, there will be no margin on the sides -->
+      <div class="row">
+
+        <div class="col-md-12 text-center">  <!-- text-center is the bootstrap code to center the text -->
+          <h2>TECHNICAL SKILLS</h2>
+          <p>a representation of my proficiency in each skill</p>
+        </div>
+
+        <div class="owl-carousel owl-theme">
+
+          <div class="skill">
+            <span class="chart" data-percent="80">
+              <span class="percent">80</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>HTML</h4>
+            <p>Used in all my web based projects</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="60">
+              <span class="percent">60</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>CSS</h4>
+            <p>Used in all my web based projects</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="70">
+              <span class="percent">70</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>Javascript</h4>
+            <p>Used in all my web based projects</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="70">
+              <span class="percent">70</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>Node.js</h4>
+            <p>Used in some of my web based projects</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="40">
+              <span class="percent">40</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>MongoDB</h4>
+            <p>Used in some of my web based projects</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="80">
+              <span class="percent">80</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>Java</h4>
+            <p>Used in many of my school projects</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="50">
+              <span class="percent">50</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>Python</h4>
+            <p>Used in my AI course and Machine Learning project</p>
+          </div>
+
+          <div class="skill">
+            <span class="chart" data-percent="60">
+              <span class="percent">60</span> <!-- the number, it'll be the same as data-percent above -->
+              <canvas height="152" width="152"></canvas>  <!-- the pie chart -->
+            </span>
+            <h4>C#</h4>
+            <p>Used in my game programming course</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="stats" class="statsSection section">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-3 col-sm-6">
+          <div class="squareItem">
+            <div class="squareInnerContainer">
+              <div class="squareIcon">
+                <i class="fab fa-internet-explorer"></i>
+              </div>
+              <div class="squareContent">
+                <h2 class="counter">12</h2>
+                <h3>Websites Made</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="squareItem">
+            <div class="squareInnerContainer">
+              <div class="squareIcon">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <div class="squareContent">
+                <h2 class="counter">4</h2>
+                <h3>Games Made</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="squareItem">
+            <div class="squareInnerContainer">
+              <div class="squareIcon">
+                <i class="fab fa-python"></i>
+              </div>
+              <div class="squareContent">
+                <h2 class="counter">1</h2>
+                <h3>AI Projects</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6">
+          <div class="squareItem">
+            <div class="squareInnerContainer">
+              <div class="squareIcon">
+                <i class="fab fa-java"></i>
+              </div>
+              <div class="squareContent">
+                <h2 class="counter">27</h2>
+                <h3>Java Course Projects</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="contact" class="contactSection section">
+    <div class="col-md-12 text-center">
+      <p class="subHeading">Like what you see?</p>
+      <h2>I'd love to hear from you!</h2>
+      <a href="mailTo:jinglintan@yahoo.com" class="contactButton">GET IN TOUCH!</a>
+    </div>
+  </div>
+
+  <div id="portfolio" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="heading">
+          <h2>PORTFOLIO</h2>
+        </div>
+        <div class="filter">
+          <ul id="filters">
+            <li><a href="#" data-filter="*" class="current">ALL</a></li>
+            <li><a href="#" data-filter=".apps">Games</a></li>
+            <li><a href="#" data-filter=".me">Me</a></li>
+            <li><a href="#" data-filter=".websites">Websites</a></li>
+          </ul>
+        </div>
+
+        <div class="itemsContainer">
+          <ul class="items">
+
+            <li onclick="" class="apps col-xs-6 col-sm-4 col-md-3 col-lg-3">  <!-- the class "apps" decides the filter category, the empty onclick is to fix bugs for safari browser -->
+              <div class="item">
+                <img src="img/portfolio/simonGame_thumbnail.png" alt="">  <!-- thumbnail, needs to be square shape -->
+                <div class="icons">
+                  <a href="img/portfolio/simonGame.png" title="View image" class="openButton" data-fancybox data-caption="...">  <!-- title is to show hint when mouse hover over it -->
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a href="https://jinglintan.github.io/Simon_game/" target="_blank" class="projectLink">  <!-- target is to open a new tab -->
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </li>
+
+            <li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+              <div class="item">
+                <img src="img/portfolio/toDoList_thumbnail.png" alt="">
+                <div class="icons">
+                  <a href="img/portfolio/toDoList.png" title="View image" class="openButton" data-fancybox data-caption="...">  <!-- title is to show hint when mouse hover over it -->
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a href="https://todo-list2019.herokuapp.com/" target="_blank" class="projectLink">  <!-- target is to open a new tab -->
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </li>
+
+            <li onclick="" class="websites col-xs-6 col-sm-4 col-md-3 col-lg-3">
+              <div class="item">
+                <img src="img/portfolio/blog_thumbnail.png" alt="">
+                <div class="icons">
+                  <a href="img/portfolio/blog.png" title="View image" class="openButton" data-fancybox data-caption="...">  <!-- title is to show hint when mouse hover over it -->
+                    <i class="fa fa-search"></i>
+                  </a>
+                  <a href="https://simple-blog2019.herokuapp.com/" target="_blank" class="projectLink">  <!-- target is to open a new tab -->
+                    <i class="fa fa-link"></i>
+                  </a>
+                </div>
+                <div class="imageOverlay"></div>
+              </div>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="copyrightSection">
+    <div class="col-md-12 text-center">
+      <p>&copy; Copyright Jinglin Tan 2019</p>
+    </div>
+  </div>
+
+  <!-- countup js, the stats section count animation -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/countUp-jquery.min.js"></script>
+  <!-- superslider js, the slides section slider -->
+  <script src="js/jquery.superslides.min.js" charset="utf-8"></script>
+  <!-- easy pie chart js, the skills section pie chart -->
+  <script src="js/jquery.easypiechart.min.js" charset="utf-8"></script>
+  <!-- typed js, the slides section type animation -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <!-- owl carousel js, the skill section slider -->
+  <script src="js/owl.carousel.min.js"></script>
+  <!-- bootstrap js cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <!-- isotope js cdn, need pay for license if used commercially, the portfolio section filter -->
+  <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js" charset="utf-8"></script>
+  <!-- fancybox js cdn, need pay for license if used commercially, the portfolio section pop up image -->
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+  <!-- local js -->
+  <script src="js/script.js" charset="utf-8"></script>
+</body>
+
+</html>

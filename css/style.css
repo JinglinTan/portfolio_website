@@ -1,0 +1,384 @@
+body {   /* default setting for body */
+  font-size: 14px;
+  color: #333;
+  background-color: #fff;
+  letter-spacing: 1px;
+}
+
+.section {   /* apply to all sections */
+  padding: 100px 0;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3; /* the sliders have z-index 2, and the left and right bottons have z-index 6 */
+  background-color: rgba(0, 0, 0, 0.4)
+} /* this applys an transparent black overlay on the whole div, to show white text and bottons easily */
+
+.slides-navigation {
+  z-index: 6;  /* we set this to 6 since the titleMessage has 5 */
+}
+
+.slides-navigation .next,
+.slides-navigation .prev {
+  width: 47px;
+  height: 47px;
+  background-size: cover;  /* this means the image will cover the whole 47px */
+  background-repeat: no-repeat;  /* this means if the window is bigger than the image, don't repeat the image */
+}
+
+.slides-navigation a.next {
+  right: 20px;
+  background-image: url(../img/icons/next.png);  /* need .. since it's based on the css file location */
+}
+
+.slides-navigation a.prev {
+  left: 20px;
+  background-image: url(../img/icons/previous.png);
+}
+
+.titleMessage {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 5;
+    text-align: center;
+    margin-top: -125px;  /* we did top:50% above, but want it higher, so shift it upward a bit */
+}
+
+.titleMessage .heading p {
+  color: #fff;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.4); /* rightward, downward, blur, color */
+  font-weight: 100; /* how thick */
+  letter-spacing: 8px; /* space between letters */
+}
+
+.titleMessage .heading .main {
+  font-size: 50px;
+}
+
+.titleMessage .heading .sub {
+  font-size: 27px;
+}
+
+/* about section */
+
+.aboutImage {
+  max-width: 100%;
+}
+
+/* skills section */
+
+.skillsSection,
+.contactSection {
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+.chart .percent:after {  /* put the content after the element, so it won't affect the js that put the animation to treat it as a number */
+  content: "%";
+}
+
+.skill {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.owl-carousel {
+  cursor: grab;
+}
+
+.chart {
+  position: relative;   /* let the .chart canvas postion:abolute based on .chart as the parent  */
+  display: inline-block;
+  width: 152px;
+  height: 152px;
+  text-align: center;
+}
+
+.chart canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.chart .percent {
+  color: #fff;
+  line-height: 152px;  /* a way to make the text vertically center by changing its 'height'(the height that doesn't change the size of text but the size of space and text) */
+  display: inline-block;
+  font-size: 35px;
+}
+
+/* stats section */
+
+.squareItem {
+  margin-top: 30px;
+  position: relative;
+}
+
+.squareInnerContainer {
+  position: relative;
+  padding: 50px 15px 35px;
+  text-align: center;
+  border: 2px solid #444;
+  border-top: none;
+}
+
+.squareInnerContainer:before,
+.squareInnerContainer:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  width: 30%;
+  border-top: 2px solid #444;
+}
+
+.squareInnerContainer:before {
+  right: -1px;
+}
+
+.squareInnerContainer:after {
+  left: 0px;
+}
+
+.squareContent h2 {
+  font-size: 56px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #2c3e50;
+}
+
+.squareContent h3 {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.squareIcon {
+  position: absolute;
+  left: 30%;
+  top: -30px;
+  width: 40%;
+  height: 60px;
+  font-size: 45px; /* we can use the div to change the size of icons from fontawesoem by font-size */
+  color: #444;
+}
+
+/* contact section */
+
+.contactButton {
+  color: #fff;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 2px;
+}
+
+.contactButton:hover {
+  text-decoration: none;
+  color: #2c3e50;
+  background-color: #fff;
+}
+
+/* portfolio section */
+
+.filter a {
+  color: #bdc3c7;
+  border: 1px solid #bdc3c7;
+  padding: 10px 18px;
+  display: block;
+}
+
+.filter li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.filter .current {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  color: #fff;
+}
+
+.filter {
+  text-align: center;
+  width: 100%;
+}
+
+.section .heading {
+  text-align: center;
+  padding-bottom: 40px;
+  width: 100%;
+}
+
+.items li {
+  display: inline-block;
+  padding: 5px;
+}
+
+.itemsContainer {
+  width: 100%;   /* the container only recognize the width of the <ul>, when we chang the <li> to inline-block, it still only know the width of the child, not the grandchild */
+}
+
+.items li img {
+  width: 100%;
+
+  -webkit-transition: all 0.2s linear, 1s;  /* slow down the zoom in animation */
+  -moz-transition: all 0.2s linear, 1s;
+  -o-transition: all 0.2s linear, 1s;
+  -ms-transition: all 0.2s linear, 1s;
+  -transition: all 0.2s linear, 1s;
+}
+
+.items .item {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.items .icons {
+  position: absolute;
+    width: 90px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    margin: -20px auto 0 -47px;
+    text-align: center;
+    z-index: 3;
+}
+
+.items .icons i {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 9px;
+}
+
+.items a {
+  width: 40px;
+  height: 40px;
+  background-color: #2c3e50;
+  position: relative;
+  display: inline-block;  /* need to do this to change the width and height of <a> */
+
+  -webkit-transition: all 0.2s linear, 0.2s;  /* animation of fly buttons, the second 0.2s is the time of animation */
+  -moz-transition: all 0.2s linear, 0.2s;
+  -o-transition: all 0.2s linear, 0.2s;
+  -ms-transition: all 0.2s linear, 0.2s;
+  -transition: all 0.2s linear, 0.2s;
+}
+
+.items .imageOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+
+  -webkit-transition: all 0.2s linear, 1s;  /* animation of slow appear when opacity becomes 1 */
+  -moz-transition: all 0.2s linear, 1s;
+  -o-transition: all 0.2s linear, 1s;
+  -ms-transition: all 0.2s linear, 1s;
+  -transition: all 0.2s linear, 1s;
+}
+
+.items .item:hover .imageOverlay{  /* when the item is hovered, change the css of imageOverlay */
+  opacity: 1;
+}
+
+.items .openButton {
+  float: left;
+  left: -200px;
+}
+
+.items .projectLink {
+  float: right;
+  right: -200px;
+}
+
+.items .item:hover .openButton {
+  left: 0px;
+}
+
+.items .item:hover .projectLink {
+  right: 0px;
+}
+
+.items .item:hover img {
+  -webkit-transform: scale(1.05, 1.05);  /* animation of zoom in */
+  -moz-transform: scale(1.05, 1.05);
+  -o-transform: scale(1.05, 1.05);
+  -ms-transform: scale(1.05, 1.05);
+  -transform: scale(1.05, 1.05);
+}
+
+.items {
+  padding: 0;  /* fix the 3-only images in a row, change it to 4 images in a row */
+}
+
+/* copyright section */
+
+.copyrightSection {
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 30px 5px;
+}
+
+.copyrightSection p {
+  margin: 0;
+}
+
+/* navbar section */
+
+#navigation {
+  background-color: #2c3e50;
+  padding: 20px 10px;
+  z-index: 100;
+  width: 100%;  /* fix the bug that when the position is fixed, the width becomes only big enough to contain the button content */
+}
+
+#navigation li {
+  padding: 0 10px;
+}
+
+#navigation li a {
+  color: #fff;
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  background: url(../img/icons/menu.png);
+  background-size: 100%;  /* this means the image will cover the whole */
+}
+
+.fixedNav #navigation {
+  position: fixed;
+  top: 0;
+}
+
+/* loader */
+
+.loader {
+  width: 100%;
+  height: 100%;
+  background-color: #2c3e50;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.loader .inner {
+  width: 100%;
+  height: 100%;
+  background: url(../img/loader.gif) center center no-repeat; /* means vertically and horizontally centered, no repeat for bigger container */
+}
