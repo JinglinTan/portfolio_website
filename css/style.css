@@ -40,13 +40,13 @@ body {   /* default setting for body */
 }
 
 .titleMessage {
-    position: absolute;
-    width: 100%;
-    height: 250px;
-    top: 50%;
-    z-index: 5;
-    text-align: center;
-    margin-top: -125px;  /* we did top:50% above, but want it higher, so shift it upward a bit */
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 50%;
+  z-index: 5;
+  text-align: center;
+  margin-top: -125px;  /* we did top:50% above, but want it higher, so shift it upward a bit */
 }
 
 .titleMessage .heading p {
@@ -171,11 +171,11 @@ body {   /* default setting for body */
 
 .contactButton {
   color: #fff;
-    padding: 15px 20px;
-    display: inline-block;
-    margin-top: 20px;
-    border: 1px solid #fff;
-    border-radius: 2px;
+  padding: 15px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  border: 1px solid #fff;
+  border-radius: 2px;
 }
 
 .contactButton:hover {
@@ -242,19 +242,19 @@ body {   /* default setting for body */
 
 .items .icons {
   position: absolute;
-    width: 90px;
-    height: 40px;
-    left: 50%;
-    top: 50%;
-    margin: -20px auto 0 -47px;
-    text-align: center;
-    z-index: 3;
+  width: 90px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  margin: -20px auto 0 -47px;
+  text-align: center;
+  z-index: 3;
 }
 
 .items .icons i {
-    color: #fff;
-    font-size: 20px;
-    margin-top: 9px;
+  color: #fff;
+  font-size: 20px;
+  margin-top: 9px;
 }
 
 .items a {
